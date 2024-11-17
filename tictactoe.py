@@ -31,11 +31,19 @@ def place_marker(board,marker,position):
         print("Choose another position, this position is already taken")
 
 #Check to see who win or a tie 
-def win_check(board,mark):
-    if(board[row[0]] ):
-        return true
-    elif(): 
+def win_check(board,marker):
+    for row in board:
+        if(row[0] == row [1] == row[2] == marker):
+            return True 
         
+    for col in range(3):
+        if(col[0] == col [1] == col[2] == marker):
+            return True 
+    
+    if board[0][0] = board[1][1] == board[2][2] == marker:
+        return True
+
+    return False 
     
 print("Welcome To The Tic Tac Toe Game!")
 board = [
