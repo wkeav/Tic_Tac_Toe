@@ -15,7 +15,7 @@ def player_input():
         else:
             print("Invalid marker, please enter 'X' or 'O'")
 
-#Handle player's marker on the board
+#Handle the player's marker on the board
 def place_marker(board,marker,position):
     #Convert position (1-9) to row and column 
     row = (position - 1) // 3 
@@ -30,7 +30,7 @@ def place_marker(board,marker,position):
     else: 
         print("Choose another position, this position is already taken")
 
-#Check to see who win or a tie 
+#Check to see who wins or a tie 
 def win_check(board,marker):
     for row in board:
         if(row[0] == row [1] == row[2] == marker):
@@ -40,7 +40,7 @@ def win_check(board,marker):
         if(col[0] == col [1] == col[2] == marker):
             return True 
     
-    if board[0][0] = board[1][1] == board[2][2] == marker:
+    if(board[0][0] == board[1][1] == board[2][2] == marker):
         return True
 
     return False 
